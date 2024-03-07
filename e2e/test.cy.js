@@ -1,0 +1,18 @@
+describe('Ticket Booking',() =>{
+    it('book', () =>{
+        cy.visit('https://ticketnew.com/movies')
+        cy.get('.MobileMovieCitySelector_topCityName__ZNSAG').contains('Chennai').click()
+        cy.get('.H5RunningMovieV2_movieName__XlSnn').contains('Vadakkupatti Ramasamy').click()
+        cy.get('.MovieSessionsListing_timeblock_frmt_Ux_kX').contains('VETTRI').click()
+        cy.wait(4000)
+        cy.get('span[aria-label="available  seat, class GOLD, row B, column 5, price 130  "]').click()
+       cy.get('span[aria-label="available  seat, class GOLD, row B, column 1, price 130  "]').click()
+        cy.get('span[aria-label="available  seat, class GOLD, row B, column 2, price 130  "]').click()
+        cy.get('span[aria-label="available  seat, class GOLD, row B, column 3, price 130  "]').click()
+        cy.get('span[aria-label="available  seat, class GOLD, row B, column 4, price 130  "]').click()
+        cy.get('span[aria-label="available  seat, class GOLD, row B, column 7, price 130  "]').click()
+        cy.get('span[aria-label="available  seat, class GOLD, row B, column 6, price 130  "]').click()
+        cy.get('button').contains('Continue').click()
+cy.screenshot()
+    })
+})
